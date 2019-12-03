@@ -26,6 +26,10 @@ module CSVImporter
       end
     end
 
+    def clean_model
+      @model = nil
+    end
+
     # A hash with this row's attributes
     def csv_attributes
       @csv_attributes ||= Hash[header.column_names.zip(row_array)]
